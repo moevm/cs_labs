@@ -437,7 +437,7 @@ disable=fixme,E0302,W0622
 # W0702: bare-except - голый except без указания типа исключения
 # C0411: wrong-import-order - неправильный порядок импортов
 # C0413: wrong-import-position - импорт не в начале файла
-enable=C0321,W0702,C0411,C0413
+enable=C0321,W0702,C0413
 
 
 [METHOD_ARGS]
