@@ -90,6 +90,9 @@ load-plugins=
     pylint.extensions.comparison_placement,
     pylint.extensions.dict_init_mutate,
     pylint.extensions.consider_refactoring_into_while_condition,
+    pylint.extensions.bad_builtin,
+    pylint.extensions.broad_try_clause,
+    pylint.extensions.magic_value,
 # Pickle collected data for later comparisons.
 persistent=no
 
@@ -105,10 +108,6 @@ recursive=yes
 # directory used to determine a package namespace for modules located under the
 # source root.
 source-roots=./src,./tests
-
-# When enabled, pylint would attempt to guess common misconfiguration and emit
-# user-friendly hints instead of false-positive error messages.
-suggestion-mode=yes
 
 # Allow loading of arbitrary C extensions. Extensions are imported into the
 # active Python interpreter and may run arbitrary code.
@@ -434,7 +433,11 @@ disable=fixme,E0302,W0622
 # either give multiple identifier separated by comma (,) or put this option
 # multiple time (only on the command line, not in the configuration file where
 # it should appear only once). See also the "--disable" option for examples.
-enable=
+# C0321: multiple-statements - несколько операторов в одной строке
+# W0702: bare-except - голый except без указания типа исключения
+# C0411: wrong-import-order - неправильный порядок импортов
+# C0413: wrong-import-position - импорт не в начале файла
+enable=C0321,W0702,C0411,C0413
 
 
 [METHOD_ARGS]

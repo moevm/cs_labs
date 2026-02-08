@@ -1,0 +1,24 @@
+[flake8]
+# Максимальная когнитивная сложность функции
+max-cognitive-complexity = 15
+
+# Проверки, которых нет в pylint:
+# E251: unexpected spaces around keyword / parameter equals
+# E301: expected 1 blank line, found 0
+# E302: expected 2 blank lines, found N
+# E303: too many blank lines
+# E304: blank lines found after function decorator
+# E305: expected 2 blank lines after class or function definition
+# E306: expected 1 blank line before a nested definition
+# CCR001: Cognitive complexity is too high
+
+select = E251,E301,E302,E303,E304,E305,E306,CCR001
+
+# Исключаем виртуальное окружение и кэш
+exclude =
+    .venv,
+    __pycache__,
+    .git
+
+# Максимальная длина строки (согласовано с pylintrc)
+max-line-length = 150
